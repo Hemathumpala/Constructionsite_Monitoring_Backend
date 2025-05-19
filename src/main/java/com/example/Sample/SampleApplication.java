@@ -18,7 +18,7 @@ public class SampleApplication {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**") // apply to all endpoints
-						.allowedOrigins("http://localhost:3003", "https://your-frontend-domain.com")
+						.allowedOrigins("http://localhost:3002", "https://your-frontend-domain.com")
 						.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
 						.allowedHeaders("*")
 						.allowCredentials(true); // set to false if not using cookies/auth headers

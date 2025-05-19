@@ -29,6 +29,7 @@ public class SampleController {
 
     @PostMapping("/UserSign")
     public String UserSignIn(@RequestBody UserRequest userRequest){
+
         return sampleService.UserSignIn(userRequest);
     }
 
@@ -51,7 +52,7 @@ public class SampleController {
             return ResponseEntity.status(500).body("Failed to upload image: " + e.getMessage());
         }
     }
-    @PutMapping("/update/{id}")
+    @PostMapping("/update/{id}")
     public ResponseEntity<String> updateImage(@PathVariable int id, @RequestParam("file") MultipartFile file) {
         try {
             MonitoringImages optionalImage = imageRepository.findById(id);
